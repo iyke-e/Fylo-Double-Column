@@ -18,7 +18,7 @@
     --f600: 28px;
     --f700: 32px;
     --f800: 60px;
-    --gap: 15px
+    --gap: 15px;
 }
 
 h1 {
@@ -65,11 +65,11 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: clamp(20px, 4vw + 1rem, 60px);
+    margin: clamp(10px, 3vw + 1rem, 60px);
 }
 
 .header img {
-    width: 10rem;
+    width: 100px;
 }
 
 nav {
@@ -95,11 +95,12 @@ nav {
 }
 
 .sec1 p {
+    display: inline-block;
     padding: 20px;
 }
 
 input {
-    min-width: 320px;
+    width: 90%;
     padding: 10px 15px;
     border: 1px solid var(--Very-Dark-Blue);
     border-radius: 3px;
@@ -109,16 +110,17 @@ input {
 }
 
 .sec1 a {
-    min-width: 300px;
-    padding: 10px 115px;
+    width: 90%;
+    padding: 10px;
     background: var(--Bright-Blue);
     border-radius: 3px;
     color: #fff;
+    display: inline-block;
 }
 
 .bg-top {
     background-image: url(images/bg-curve-mobile.svg);
-    height: clamp(40px, 30vw + 1rem, 300px);
+    height: clamp(40px, 30vw + 1rem, 200px);
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
@@ -202,7 +204,9 @@ input {
 }
 
 .sec3 a {
-    padding: 10px 83px;
+    display: inline-block;
+    width: 90%;
+    padding: 10px;
     background: var(--Bright-Blue);
     border-radius: 3px;
     color: #fff;
@@ -242,6 +246,21 @@ input {
     font-size: 30px;
 }
 
+@media (min-width: 280px) and (max-width: 350px) {
+     :root {
+        --gap: 10px
+    }
+    h1 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px;
+    }
+    a {
+        font-size: 14px;
+    }
+}
+
 @media (min-width: 900px) {
     img {
         max-width: 40vw;
@@ -275,13 +294,15 @@ input {
         gap: 20px;
     }
     input {
-        width: 250px;
+        width: 350px;
         padding: 10px;
         margin-bottom: 0;
         margin-top: 0;
     }
     .sec1 a {
         padding: 10px 30px;
+        display: inline-block;
+        width: 150px;
     }
     .bg-top {
         background-image: url(images/bg-curve-desktop.svg);
@@ -338,7 +359,8 @@ input {
         margin-bottom: 20px;
     }
     .sec3 a {
-        padding: 15px 30px;
+        padding: 15px;
+        width: 200px;
     }
     .footer {
         padding: 100px 70px;
